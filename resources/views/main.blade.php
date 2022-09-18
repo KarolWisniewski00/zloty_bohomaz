@@ -11,15 +11,15 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="mainmenu">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("top")'>Start</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("works")'>Prace</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("studio")'>Studio</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("artist")'>Artyści</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("price")'>Wycena</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("voucher")'>Voucher</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("heal")'>Gojenie</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("top")'>Start</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("works")'>Prace</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("studio")'>Studio</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("artist")'>Artyści</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("price")'>Wycena</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("voucher")'>Voucher</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("heal")'>Gojenie</a></li>
                     <li class="nav-item"><a class="nav-link" href="rules">Regulamin</a></li>
-                    <li class="nav-item"><a class="nav-link" type="button" onclick='go_to("contact")'>Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick='go_to("contact")'>Kontakt</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
     </div>
     <!--INSTA NAVBAR RIGHT-->
     <div class="fixed-r d-md-none" id="up">
-        <a type="button" onclick='go_to("top")'><img src="assets/up-arrow.png" alt="up-arrow-icon"></a>
+        <a onclick='go_to("top")'><img src="assets/up-arrow.png" alt="up-arrow-icon"></a>
     </div>
 </header>
 
