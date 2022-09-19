@@ -17,28 +17,11 @@
 
 <body>
     @yield('content')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script>
-        /*GO TO*/
-        function go_to(where) {
-            const yOffset = -80; 
-            const element = document.getElementById(where);
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: y, behavior: 'smooth'});
-
-            //close navbar
-            $('button[aria-expanded="true"]').click();
-        }
-
-        /*ON SCREEN CLICK - CLOSE NAVBAR*/
-        $(window).on('click', function(event) {
-            var clickOver = $(event.target)
-            if ($('.navbar .navbar-toggler').attr('aria-expanded') == 'true' && clickOver.closest('.navbar').length === 0) {
-                $('button[aria-expanded="true"]').click();
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
