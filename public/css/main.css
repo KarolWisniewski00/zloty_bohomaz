@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/*DARK*/
+[data-bs-theme="dark"] {
+    --bs-body-color: var(--bs-white);
+    --bs-body-color-rgb: #{to-rgb($white)};
+    --bs-body-bg: #2d2c2c;
+    --bs-body-bg-rgb: rgb(45, 44, 44);
+}
 
-/*NAVBAR
-logo size-200
-number
-
-
-*/
+/*FONT*/
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,23 +19,7 @@ number
     font-family: 'Anton', sans-serif !important;
 }
 
-.fs-7 {
-    font-size: 7em;
-}
-
-.mw-7 {
-    max-width: 7em;
-}
-
-.opacity-15 {
-    opacity: 0.15;
-}
-
-.bg-primary {
-    --bs-bg-opacity: 1;
-    background-color: #070606 !important
-}
-
+/*BTN*/
 .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: #070606;
@@ -49,6 +35,248 @@ number
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #070606;
     --bs-btn-disabled-border-color: #070606
+}
+
+.btn-hover-0 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-0:hover {
+    border: 4px solid #070606;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-0 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-0:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-0:after {
+    background: var(--bs-body-bg);
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-0:hover:after {
+    background: var(--bs-body-bg);
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.btn-hover-1 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-1:hover {
+    border: 4px solid #070606;
+    background-color: #FFF;
+    color: #070606;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-1 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-1:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-1:after {
+    background: #FFF;
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-1:hover:after {
+    background: #FFF;
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.btn-hover-2 .color {
+    color: #FFC107;
+}
+
+.btn-hover-2 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-2:hover {
+    border: 4px solid #070606;
+    background-color: #FFC107;
+    color: #070606;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-2:hover .color {
+    color: #070606;
+}
+
+.btn-hover-2 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-2:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-2:after {
+    background: #FFC107;
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-2:hover:after {
+    background: #FFC107;
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+.btn-hover-3 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-3 .color {
+    color: #A30EB3;
+}
+
+.btn-hover-3:hover {
+    border: 4px solid #070606;
+    background-color: #A30EB3;
+    color: #fff;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-3:hover .color {
+    color: #fff;
+}
+
+.btn-hover-3 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-3:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-3:after {
+    background: #A30EB3;
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-3:hover:after {
+    background: #A30EB3;
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+
+/*ALL*/
+.fs-7 {
+    font-size: 7em;
+}
+
+.mw-7 {
+    max-width: 7em;
+}
+
+.opacity-15 {
+    opacity: 0.2;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #070606 !important
 }
 
 .div-img-1 {
@@ -96,6 +324,7 @@ number
     -webkit-text-stroke: 0.4px rgba(213, 173, 109, 1);
 }
 
+/*SCREEN*/
 @media screen and (max-width: 768px) {
     .div-img-1 {
         height: 30em !important;

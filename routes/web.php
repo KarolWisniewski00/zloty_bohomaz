@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\RuleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
-
-Route::get('rules', function () {
-    return view('rules');
-});
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/rule',[RuleController::class,'show'])->name('rule');

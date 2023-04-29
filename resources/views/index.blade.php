@@ -1,44 +1,6 @@
-@extends('layouts.app')
+@extends('layout.main')
 
 @section('content')
-<!--NAV-->
-<section class="bg-primary">
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3">
-            <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none text-white logo size-200">
-                Złoty Bohomaz
-            </a>
-
-            <ul class="nav nav-pills">
-                <li class="nav-item mx-auto"><a href="#" class="nav-link text-white-50">Start</a></li>
-                <li class="nav-item dropdown">
-                    <button class="nav-link text-white-50 dropdown-toggle mx-auto" data-bs-toggle="dropdown" aria-expanded="false">
-                        O nas
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu shadow">
-                        <li><a class="dropdown-item" href="#album">Prace</a></li>
-                        <li><a class="dropdown-item" href="#artist">Artyści</a></li>
-                        <li><a class="dropdown-item" href="#about">Studio</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <button class="nav-link text-white-50 dropdown-toggle mx-auto" data-bs-toggle="dropdown" aria-expanded="false">
-                        Informacje
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu shadow">
-                        <li><a class="dropdown-item" href="#price">Wycena</a></li>
-                        <li><a class="dropdown-item" href="#voucher">Voucher</a></li>
-                        <li><a class="dropdown-item" href="#health">Gojenie</a></li>
-                        <li><a class="dropdown-item" href="#">Regulamin<i class="fa-solid fa-link ms-2"></i></a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mx-auto"><a href="#contact" class="nav-link text-white-50">Kontakt</a></li>
-                <li class="nav-item mx-auto"><a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="nav-link text-white-50"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
-        </header>
-    </div>
-</section>
-<!--END NAV-->
 <main>
     <!--HERO-->
     <section>
@@ -59,8 +21,8 @@
                         <div class="container h-100">
                             <div class="row h-100">
                                 <div class="col-12 col-md-6 h-100">
-                                    <div class="d-flex flex-column align-items-center justify-content-center h-100" style="width:fit-content">
-                                        <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                                    <div class="d-flex flex-column align-items-center justify-content-center h-100 mx-auto" style="width:fit-content">
+                                        <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-1">
                                             <div class="d-flex align-items-center justify-content-start px-1">
                                                 <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
@@ -71,46 +33,24 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                                        <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-2">
                                             <div class="d-flex align-items-center justify-content-start px-1">
                                                 <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></div>
+                                                    <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
                                                     <div class="card-body">
                                                         <h4 class="card-title">@biszusedziara</h4>
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="https://instagram.com/przysta_tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                                        <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-3">
                                             <div class="d-flex align-items-center justify-content-start px-1">
                                                 <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Oliwia<i class="fa-solid fa-heart ms-2 text-danger"></i></div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">@przysta_tattoo</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
-                                            <div class="d-flex align-items-center justify-content-start px-1">
-                                                <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Ola<i class="fa-solid fa-cloud ms-2 text-info"></i></div>
+                                                    <div class="card-header font-anton">Ola<i class="fa-solid fa-cloud ms-2 color"></i></div>
                                                     <div class="card-body">
                                                         <h4 class="card-title">@clim.tattoo</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="https://instagram.com/wheres_miki?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
-                                            <div class="d-flex align-items-center justify-content-start px-1">
-                                                <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Mikołaj<i class="fa-solid fa-wand-magic-sparkles ms-2" style="color:#F02479"></i></div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">@wheres_miki</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,12 +63,10 @@
 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <i class="fa-solid fa-chevron-left fs-1"></i>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <i class="fa-solid fa-chevron-right fs-1"></i>
                 </button>
             </div>
     </section>
@@ -138,16 +76,16 @@
         <div class="container">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">NASZE PRACE</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/diamond.png')}}" alt="album-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-images"></i></div>
             </div>
             <hr>
             <div class="row">
                 @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 shadow" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}"><img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid rounded"></button>
+                    <button type="button" class="p-0 m-0 border-0 shadow" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}"><img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow"></button>
                     <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content border-0 rounded-0">
                                 <div class="modal-header">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
@@ -156,36 +94,30 @@
                                     <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></p>
                                     <p class="text-muted m-0 p-0">@biszusedziara</p>
                                 </div>
-                                <div class="modal-footer">
-                                    <div class="d-flex flex-column align-items-center justify-content-start w-100">
-                                        <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow me-2">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                    <div class="font-anton" style="font-size: 0.8em;">Podgląd<i class="fa-solid fa-magnifying-glass ms-2"></i></div>
-                                                    <h4 class="fs-6">Zdjęcia</h4>
-                                                </div>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center" style="width:fit-content;">
+                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-0">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <h4 class="fs-6 p-0 m-0"><i class="fa-solid fa-magnifying-glass me-2"></i>Podgląd</h4>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-2">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <h4 class="fs-6 p-0 m-0">@biszusedziara</h4>
                                             </div>
-                                        </a>
-                                        <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow me-2">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                    <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></div>
-                                                    <h4 class="fs-6">@biszusedziara</h4>
-                                                </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-1">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
+                                                <h4 class="fs-6 p-0 m-0">@zloty.bohomaz</h4>
                                             </div>
-                                        </a>
-                                        <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="font-anton" style="font-size: 0.8em;">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
-                                                    <h4 class="fs-6">@zloty.bohomaz</h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -201,10 +133,10 @@
     <!--ABOUT AS-->
     <section id="about" class="bg-black text-white">
         <div class="container">
-            <hr>
+            <hr style="color:#070606">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">NASZE STUDIO</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/tattoo-studio-w.png')}}" alt="tattoo-studio-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-store"></i></div>
             </div>
             <hr>
             <div class="row">
@@ -219,8 +151,8 @@
     <section id="artist">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5">ARTYŚCI</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/kastet.png')}}" alt="about-artist-background-icon">
+                <h1 class="my-5 font-anton">ARTYŚCI</h1>
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-people-group"></i></div>
             </div>
             <hr>
             <div class="row">
@@ -234,16 +166,16 @@
     <!--ABOUT PRICE-->
     <section id="price" class="bg-primary text-white">
         <div class="container">
-            <hr>
+            <hr style="color:#070606">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">WYCENA ORAZ PRJEKT</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/tattoo-w.png')}}" alt="health-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-trophy"></i></div>
             </div>
             <hr>
-            <div class="row no-gutters justify-content-center">
+            <div class="row text-center justify-content-center">
                 <div class="col-md-3 p-3  position-relative" style="min-height: 7em;">
                     <h2 class="number font-anton">01</h2>
-                    <p class="font-anton text-center">Każdy tatuaż jest wyceniany indywidualnie cena zależy od</p>
+                    <p class="text-center fw-bold">Każdy tatuaż jest wyceniany indywidualnie cena zależy od</p>
                     <ul class="list-unstyled w-100">
                         <li class="mb-1">ilości godzin potrzebnych na wykonanie tatuażu</li>
                         <li class="mb-1">czasu potrzebnego na wykonanie projektu</li>
@@ -290,7 +222,7 @@
         <div class="container">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">VOUCHER</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/voucher.png')}}" alt="voucher-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-tags"></i></div>
             </div>
             <hr>
             <div class="row">
@@ -310,10 +242,10 @@
     <!--HEALTH-->
     <section id="health" class="bg-primary text-white">
         <div class="container">
-            <hr>
+            <hr style="color:#070606">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">GOJENIE</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/heart-w.png')}}" alt="health-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-heart"></i></div>
             </div>
             <hr>
             <div class="row">
@@ -334,7 +266,7 @@
         <div class="container">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">KONTAKT</h1>
-                <img class="position-absolute top-50 start-50 translate-middle opacity-15 mw-7" src="{{asset('asset/contact.png')}}" alt="contact-background-icon">
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-address-book"></i></div>
             </div>
             <hr>
             <div class="row">
@@ -344,10 +276,9 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <div class="d-flex flex-column align-items-start justify-content-center" style="width:fit-content">
-                                <h2 class="font-anton mt-3">Złoty Bohomaz</h2>
-                                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                        <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
+                            <div class="d-flex flex-column align-items-center justify-content-center mt-3" style="width:fit-content">
+                                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-1">
                                     <div class="d-flex align-items-center justify-content-start px-1">
                                         <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                         <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
@@ -358,59 +289,37 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                                <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-2">
                                     <div class="d-flex align-items-center justify-content-start px-1">
                                         <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                         <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></div>
+                                            <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
                                             <div class="card-body">
                                                 <h4 class="card-title">@biszusedziara</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://instagram.com/przysta_tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
+                                <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-3">
                                     <div class="d-flex align-items-center justify-content-start px-1">
                                         <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                         <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Oliwia<i class="fa-solid fa-heart ms-2 text-danger"></i></div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">@przysta_tattoo</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
-                                    <div class="d-flex align-items-center justify-content-start px-1">
-                                        <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Ola<i class="fa-solid fa-cloud ms-2 text-info"></i></div>
+                                            <div class="card-header font-anton">Ola<i class="fa-solid fa-heart ms-2 color"></i></div>
                                             <div class="card-body">
                                                 <h4 class="card-title">@clim.tattoo</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://instagram.com/wheres_miki?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100">
-                                    <div class="d-flex align-items-center justify-content-start px-1">
-                                        <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Mikołaj<i class="fa-solid fa-wand-magic-sparkles ms-2" style="color:#F02479"></i></div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">@wheres_miki</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
                         </li>
-                        <li class="mb-3">
+                        <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
                             <h2 class="font-anton">Piłsudskiego 18</h2>
-                            <p class="font-anton">Bytom</p>
+                            <p>Bytom</p>
                         </li>
-                        <li class="mb-3">
+                        <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
                             <h2 class="font-anton">zloty.bohomaz@interia.pl</h2>
-                            <a href="mailto: zloty.bohomaz@interia.pl" class="btn btn-primary rounded-0 shadow px-3 py-2"><i class="fa-solid fa-envelope me-3"></i>Napisz do nas</a>
+                            <a href="mailto: zloty.bohomaz@interia.pl" class="btn btn-primary rounded-0 shadow px-3 py-2 btn-hover-0"><i class="fa-solid fa-envelope me-3"></i>Napisz do nas</a>
                         </li>
                     </ul>
                 </div>
@@ -419,15 +328,4 @@
     </section>
     <!--END CONTACT-->
 </main>
-<!--FOOTER-->
-<footer class="footer mt-5 py-3 bg-black text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div>© 2022 Designed by Karol Wiśniewski</div>
-                <div class="font-anton">All rights reserved</div>
-            </div>
-        </div>
-    </div>
-</footer>
 @endsection
