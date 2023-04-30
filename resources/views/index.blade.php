@@ -22,45 +22,24 @@
                             <div class="row h-100">
                                 <div class="col-12 col-md-6 h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 mx-auto" style="width:fit-content">
-                                        <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-1">
+                                        @foreach($artists as $artist)
+                                        <a href="{{$artist['url']}}" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-{{$artist['hover']}}">
                                             <div class="d-flex align-items-center justify-content-start px-1">
                                                 <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
+                                                    <div class="card-header font-anton">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
                                                     <div class="card-body">
-                                                        <h4 class="card-title">@zloty.bohomaz</h4>
+                                                        <h4 class="card-title">{{$artist['insta']}}</h4>
                                                     </div>
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-2">
-                                            <div class="d-flex align-items-center justify-content-start px-1">
-                                                <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">@biszusedziara</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-3">
-                                            <div class="d-flex align-items-center justify-content-start px-1">
-                                                <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                                    <div class="card-header font-anton">Ola<i class="fa-solid fa-cloud ms-2 color"></i></div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">@clim.tattoo</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
                     <i class="fa-solid fa-chevron-left fs-1"></i>
@@ -76,13 +55,13 @@
         <div class="container">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">NASZE PRACE</h1>
-                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-images"></i></div>
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-gem"></i></div>
             </div>
             <hr>
             <div class="row">
                 @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 shadow" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}"><img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow"></button>
+                    <button type="button" class="p-0 m-0 border-0" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}"><img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow"></button>
                     <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content border-0 rounded-0">
@@ -94,7 +73,8 @@
                                     <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></p>
                                     <p class="text-muted m-0 p-0">@biszusedziara</p>
                                 </div>
-                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center" style="width:fit-content;">
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
                                     <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-0">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <h4 class="fs-6 p-0 m-0"><i class="fa-solid fa-magnifying-glass me-2"></i>Podgląd</h4>
@@ -136,12 +116,12 @@
             <hr style="color:#070606">
             <div class="text-center position-relative">
                 <h1 class="my-5 font-anton">NASZE STUDIO</h1>
-                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-store"></i></div>
+                <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-crown"></i></div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-12">
-                    <h1 class="my-5 text-center"><i class="fa-solid fa-spinner me-2"></i>W trakcie</h1>
+                    <h1 class="my-5 text-center"><i class="fa-solid fa-spinner me-2"></i>W trakcie prac</h1>
                 </div>
             </div>
         </div>
@@ -157,7 +137,38 @@
             <hr>
             <div class="row">
                 <div class="col-12">
-                    <h1 class="my-5 text-center"><i class="fa-solid fa-spinner me-2"></i>W trakcie</h1>
+                    @foreach($artists as $artist)
+                    @if($artist['id']!=1)
+                    <div class="card mb-3 border-0 rounded-0">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <img alt="artist-{{$artist['name']}}" src="{{asset('asset/'.$artist['photo'])}}" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="card-header font-anton fs-1">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 {{$artist['name']}}"></i></div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{$artist['insta']}}</h4>
+                                    <p class="card-text">{{$artist['p1']}}</p>
+                                    <p class="card-text">{{$artist['p2']}}</p>
+                                    <div class="d-flex flex-row align-items-start justify-content-start w-100">
+                                        <a href="{{$artist['url']}}" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 btn-hover-{{$artist['hover']}} me-2" style="size: 80%;">
+                                            <div class="d-flex align-items-center justify-content-start px-1">
+                                                <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
+                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
+                                                    <div class="card-header font-anton p-0 m-0">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
+                                                    <div class="card-body p-0 m-0">
+                                                        <h4 class="card-title">{{$artist['insta']}}</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -278,39 +289,19 @@
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
                             <div class="d-flex flex-column align-items-center justify-content-center mt-3" style="width:fit-content">
-                                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-1">
+                                @foreach($artists as $artist)
+                                <a href="{{$artist['url']}}" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-{{$artist['hover']}}">
                                     <div class="d-flex align-items-center justify-content-start px-1">
                                         <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                         <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
+                                            <div class="card-header font-anton">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
                                             <div class="card-body">
-                                                <h4 class="card-title">@zloty.bohomaz</h4>
+                                                <h4 class="card-title">{{$artist['insta']}}</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-2">
-                                    <div class="d-flex align-items-center justify-content-start px-1">
-                                        <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">@biszusedziara</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-3">
-                                    <div class="d-flex align-items-center justify-content-start px-1">
-                                        <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
-                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
-                                            <div class="card-header font-anton">Ola<i class="fa-solid fa-heart ms-2 color"></i></div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">@clim.tattoo</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">

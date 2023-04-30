@@ -6,8 +6,8 @@
 [data-bs-theme="dark"] {
     --bs-body-color: var(--bs-white);
     --bs-body-color-rgb: #{to-rgb($white)};
-    --bs-body-bg: #2d2c2c;
-    --bs-body-bg-rgb: rgb(45, 44, 44);
+    --bs-body-bg: #171717;
+    --bs-body-bg-rgb: rgb(25, 23, 23);
 }
 
 /*FONT*/
@@ -322,6 +322,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.4px rgba(213, 173, 109, 1);
+}
+.dropdown-menu{
+    --bs-dropdown-link-active-bg: #070606 !important;
+}
+.Daniel{
+    color: #FFC107;
+}
+.Ola{
+    color: #A30EB3;
 }
 
 /*SCREEN*/

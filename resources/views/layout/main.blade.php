@@ -16,22 +16,22 @@
     <script src="https://kit.fontawesome.com/e37acf9c2e.js" crossorigin="anonymous"></script>
 </head>
 
-<body data-bs-theme="dark">
+<body>
     <!--NAV-->
     <section id="nav" class="bg-primary fixed-top">
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3">
-                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="pe-3 d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none text-white logo size-200">
+                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none text-white logo size-200">
                     Złoty Bohomaz
                 </a>
 
-                <ul class="nav nav-pills flex-wrap flex-md-nowrap justify-content-center">
+                <ul class="nav nav-pills flex-wrap flex-md-nowrap justify-content-center align-items-center h-100">
                     <li class="nav-item"><a href="{{route('index')}}" class="nav-link text-white-50">Start</a></li>
                     <li class="nav-item dropdown">
                         <button class="nav-link text-white-50 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             O nas
                         </button>
-                        <ul class="dropdown-menu dropdown-menu shadow">
+                        <ul class="dropdown-menu shadow">
                             <li><a class="dropdown-item" href="{{route('index')}}#album">Prace</a></li>
                             <li><a class="dropdown-item" href="{{route('index')}}#artist">Artyści</a></li>
                             <li><a class="dropdown-item" href="{{route('index')}}#about">Studio</a></li>
@@ -41,24 +41,30 @@
                         <button class="nav-link text-white-50 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             Informacje
                         </button>
-                        <ul class="dropdown-menu dropdown-menu shadow">
+                        <ul class="dropdown-menu shadow">
                             <li><a class="dropdown-item" href="{{route('index')}}#price">Wycena</a></li>
                             <li><a class="dropdown-item" href="{{route('index')}}#voucher">Voucher</a></li>
                             <li><a class="dropdown-item" href="{{route('index')}}#health">Gojenie</a></li>
-                            <li><a class="dropdown-item" href="{{route('rule')}}">Regulamin</li>
+                            <li><a class="dropdown-item" href="{{route('rule')}}">Regulamin</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="{{route('index')}}#contact" class="nav-link text-white-50">Kontakt</a></li>
-                    <li class="nav-item"><a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="nav-link text-white-50"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="nav-item dropdown">
-                        <button class="nav-link text-white-50 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu shadow">
-                            <li><button class="dropdown-item" type="button"><i class="fa-solid fa-sun me-2"></i>Jasno</button></li>
-                            <li><button class="dropdown-item" type="button"><i class="fa-solid fa-moon me-2"></i>Ciemno</button></li>
-                        </ul>
-                    </li>
+                    <ul class="nav nav-pills flex-wrap flex-nowrap justify-content-center align-items-center h-100">
+                        <li class="nav-item"><a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="nav-link text-white-50"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="nav-item py-2 h-100">
+                            <div class="vr h-100 text-white"></div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link text-white-50 dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                                <i class="fa-solid fa-lightbulb" id="bd-theme-text"></i>
+                            </button>
+                            <ul class="dropdown-menu shadow" aria-labelledby="bd-theme-text">
+                                <li><button class="dropdown-item" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa-solid fa-sun me-2"></i>Jasno</button></li>
+                                <li><button class="dropdown-item" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="fa-solid fa-moon me-2"></i>Ciemno</button></li>
+                                <li><button class="dropdown-item" type="button" data-bs-theme-value="auto" aria-pressed="false"><i class="fa-solid fa-circle-half-stroke me-2"></i>Auto</button></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </ul>
             </header>
         </div>
@@ -67,7 +73,7 @@
     <!--UP-->
     <section class="fixed-top d-flex d-lg-none" style="left:auto;right:1em;top:auto;bottom:1em">
         <div>
-            <a href="#slider" class="badge rounded-pill bg-primary fs-4 p-3 border border-2 shadow btn-hover-1"><i class="fa-solid fa-chevron-up text-white"></i></a>
+            <a href="#slider" class="badge rounded-pill bg-primary fs-4 p-3 border border-2 shadow"><i class="fa-solid fa-chevron-up text-white"></i></a>
         </div>
     </section>
     <!--END UP-->
@@ -84,9 +90,10 @@
         </div>
     </footer>
     <!--END FOOTER-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="{{asset('js/theme.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 
 </html>
