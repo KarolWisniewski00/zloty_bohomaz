@@ -7,7 +7,56 @@
     <title>Złoty bohomaz</title>
     <link rel="icon" href="assets/main-icon.png" type="image/png">
     <meta name="description" content="Złoty bohomaz Tattoo Studio - Najlepsze w Bytomiu i okolicy studio tatuażu, w którym artyści oddają całe serce do wykonywanej pracy">
-    <meta name="keywords" content="złoty bohomaz, zloty bohomaz, studio tatuażu bytom, tatuaże, tatuaż artystyczny bytom, tatuaż kolorowy bytom, tatuowanie bytom, tatuaż damski bytom, salon tatuażu bytom, tatuaż męski bytom, tattoo, tattoo bytom, profesjonalne studio tatuażu bytom, bytom tattoo, bytom tatuaż, tatuaż bytom, tatuaż, bytom studio tatuażu, bohomaz, studio tatuażu, biszu tatuaż, bisz tattoo, biszusedziara, bisz tatuaż, złoty bohomaz, złoty bohomaz tattoo, złoty bohomaz tatuaż, złoty bohomaz bytom, bytom złoty bohomaz, biszu, tatuaże, świat tatuażu, tatuaż dotpoint, czarny tatuaż, tatuaż blackwork, tattoo dotwork, tattoo blackwork, tatuaż dotwork śląsk, tatuaż blackwork śląsk, świat tatuażu, tatuaż śląsk, tatuaż katowice, tattoo katowice, tattoo śląsk, tattoo chorzów, tattoo gliwice, tatuaż chorzów, tatuaż gliwice, tatto piekary śląskie, tatuaż piekary śląskie">
+    <meta name="keywords" content="
+    złoty bohomaz,
+    zloty bohomaz,
+    studio tatuażu bytom,
+    tatuaże,
+    tatuaż artystyczny bytom,
+    tatuaż kolorowy bytom,
+    tatuowanie bytom,
+    tatuaż damski bytom,
+    salon tatuażu bytom,
+    tatuaż męski bytom,
+    tattoo, tattoo bytom,
+    profesjonalne studio tatuażu bytom,
+    bytom tattoo,
+    bytom tatuaż,
+    tatuaż bytom,
+    tatuaż,
+    bytom studio tatuażu,
+    bohomaz,
+    studio tatuażu,
+    biszu tatuaż,
+    bisz tattoo,
+    biszusedziara,
+    bisz tatuaż,
+    złoty bohomaz,
+    złoty bohomaz tattoo,
+    złoty bohomaz tatuaż,
+    złoty bohomaz bytom,
+    bytom złoty bohomaz,
+    biszu, tatuaże,
+    świat tatuażu,
+    tatuaż dotpoint,
+    czarny tatuaż,
+    tatuaż blackwork,
+    tattoo dotwork,
+    tattoo blackwork,
+    tatuaż dotwork śląsk,
+    tatuaż blackwork śląsk,
+    świat tatuażu,
+    tatuaż śląsk,
+    tatuaż katowice,
+    tattoo katowice,
+    tattoo śląsk,
+    tattoo chorzów,
+    tattoo gliwice,
+    tatuaż chorzów,
+    tatuaż gliwice,
+    tatto piekary śląskie,
+    tatuaż piekary śląskie
+    ">
     <meta name="author" content="Karol Wiśniewski">
     <meta http-equiv="X-Ua-Compatible" content="IE=edge">
 
