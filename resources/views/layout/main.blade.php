@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="assets/main-icon.png" type="image/png">
-    <meta property="og:image" content="adres_url_obrazka" />
+    <link rel="icon" href="{{asset('asset/logo.png')}}" type="image/png">
+    <meta property="og:image" content="{{asset('asset/logo.png')}}" />
     <meta name="robots" content="max-image-preview:large" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:locale" content="pl_PL" />
@@ -81,7 +81,7 @@
     <!--UP-->
     <section class="fixed-top d-flex d-lg-none" style="left:auto;right:1em;top:auto;bottom:1em">
         <div>
-            <a href="#slider" class="badge rounded-pill bg-primary fs-4 p-3 border border-2 shadow"><i class="fa-solid fa-chevron-up text-white"></i></a>
+            <a href="#top" class="badge rounded-pill bg-primary fs-4 p-3 border border-2 shadow"><i class="fa-solid fa-chevron-up text-white"></i></a>
         </div>
     </section>
     <!--END UP-->

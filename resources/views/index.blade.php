@@ -17,7 +17,7 @@
 @section('content')
 <main>
     <!--HERO-->
-    <section>
+    <section id="top">
         <div id="slider" class="carousel slide shadow" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -75,50 +75,50 @@
             <div class="row">
                 @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 h-100" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
-                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow h-100">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden" id="button-tattoo-photo-{{$x}}" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
+                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" id="img-tattoo-photo-{{$x}}" class="img-fluid shadow">
                     </button>
-                    <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content border-0 rounded-0">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid">
-                                    <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2 text-warning"></i></p>
-                                    <p class="text-muted m-0 p-0">@biszusedziara</p>
-                                </div>
-                                <hr>
-                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-0">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <h4 class="fs-6 p-0 m-0"><i class="fa-solid fa-magnifying-glass me-2"></i>Podgląd</h4>
-                                        </div>
-                                    </a>
-                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-2">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                <div class="h4 fs-6 p-0 m-0">@biszusedziara</div>
+                    @if ($x <= 3)
+                    @define $number=1
+                    @elseif($x> 3)
+                        @define $number = 2
+                        @endif
+                        <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content border-0 rounded-0">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid">
+                                        <p class="text-muted m-0 p-0 font-anton">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2"></i></p>
+                                        <p class="text-muted m-0 p-0">{{$artists[$number]['insta']}}</p>
+                                    </div>
+                                    <hr>
+                                    <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                        <a href="{{$artists[$number]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[$number]['hover']}}">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                    <div class="font-anton" style="font-size: 0.8em;">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2 color"></i></div>
+                                                    <div class="h4 fs-6 p-0 m-0">{{$artists[$number]['insta']}}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-1">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                <div class="font-anton" style="font-size: 0.8em;">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
-                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                        </a>
+                                        <a href="{{$artists[0]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[0]['hover']}}">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                    <div class="font-anton" style="font-size: 0.8em;">{{$artists[0]['name']}}<i class="fa-solid fa-{{$artists[0]['icon']}} ms-2"></i></div>
+                                                    <div class="h4 fs-6 p-0 m-0">{{$artists[0]['insta']}}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--END IMAGE-->
+                        <!--END IMAGE-->
             </div>
             @endfor
         </div>
@@ -136,16 +136,54 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                        <div class="h1 font-anton">Pracownia</div>
-                        <p class="fs-4 text-center">Nasze studio znajduje się w Bytomiu. Jest otwarte od 11.01.2022 roku i nieprzerwanie prężnie się rozwija. Kochamy robić dziarki dlatego oddaliśmy mase pracy i całe nasze serca aby studio się otwarło.</p>
-                        <p class="fs-4 text-center">Profesjonalne podejście pozwoliło nam zyskać ogromną gammę zadowolonych klientów i klientek. Do każdej osoby podchodzimy indywidualnie. Każdy tatuaż robimy najlepiej jak to możliwe, dzięki czemu uzyskujesz produkt którego oczekujesz!</p>
+                <div class="col-12 col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
+                        <div class="h1 font-anton">Pracownia tatuażu</div>
+                        <p class="fs-4 text-center">Wracamy do was z czymś nowym! A konkretnie to studiem pod nowym adresem Piłsudskiego 18.</p>
+                        <p class="fs-4 text-center">Ostatnie miesiące były ciężkie i kosztowały wiele nerwów, ale po odświeżeniu nowego lokalu, efekty pokazujemy na zdjęciach. Zdecydowaliśmy się na taki krok przez przestrzeń której w poprzednim lokalu było za mało.
+                        <p class="fs-4 text-center">Na wsześniejszym studiu poznaliśmy niesamowite osoby jak i mamy dużo wspaniałych wspomnień szczególnie z wami, klientami.</p>
+                        <p class="fs-4 text-center">Ruch ten miał na celu danie wam większej swobody u nas aby każdy miał swoją przestrzeń ale też chcieliśmy zachować w tym wszystkim efekt, że jak przychodzicie do nas to czujecie się jak u znajomych, a nie w miejscu gdzie wykonuje się daną usługę.</p>
+                        <p class="fs-4 text-center">No i tak powstał Złoty Bohomaz w lepszym stylu! Chcemy się prz was rozwijać, czuć radość z pracy ale przede wszystkim pisać wspólną historię. Damy od nas wszystko co najlepsze, aby kolejne lata były wspaniałym przeżyciem dla każdego z was!
+                        <p class="fs-4 text-center fw-bold">Dziękujemy że jesteście i bądźcie dalej z nami.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                        <img alt="studio" src="{{asset('asset/studio.jpeg')}}" class="img-fluid" style="max-height: 75%;">
+                <div class="col-12 col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
+                        <div class="row">
+                            @for($i = 1 ; $i <= 4 ; $i++)
+                            <div class="col-6">
+                                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                    <button type="button" class="p-0 m-0 mb-3 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden" id="button-studio-photo-{{$i}}" data-bs-toggle="modal" data-bs-target="#studio-photo-{{$i}}">
+                                        <img src="{{asset('image/studio'.$i.'.jpg')}}" alt="studio-photo-{{$i}}" id="img-studio-photo-{{$i}}" class="img-fluid shadow">
+                                    </button>
+                                    <div class="modal fade" id="studio-photo-{{$i}}" tabindex="-1" aria-labelledby="studio-photo-{{$i}}-label" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content border-0 rounded-0">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="{{asset('image/studio'.$i.'.jpg')}}" alt="studio-photo-{{$i}}" class="img-fluid">
+                                                </div>
+                                                <hr>
+                                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                                    <a href="{{$artists[0]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[0]['hover']}}">
+                                                        <div class="d-flex align-items-center justify-content-center">
+                                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                                <div class="font-anton" style="font-size: 0.8em;">{{$artists[0]['name']}}<i class="fa-solid fa-{{$artists[0]['icon']}} ms-2"></i></div>
+                                                                <div class="h4 fs-6 p-0 m-0">{{$artists[0]['insta']}}</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endfor
+                        </div>
                     </div>
                 </div>
             </div>
@@ -344,4 +382,29 @@
     </section>
     <!--END CONTACT-->
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(window).on("resize", function() {
+        height = 1000000
+        for (let index = 1; index <= 12; index++) {
+            var imgHeight = $('#img-tattoo-photo-' + index).height();
+            if (imgHeight < height) {
+                height = imgHeight
+            }
+        }
+        for (let index = 1; index <= 12; index++) {
+            $('#button-tattoo-photo-' + index).height(height);
+        }
+    });
+    height = 1000000
+    for (let index = 1; index <= 12; index++) {
+        var imgHeight = $('#img-tattoo-photo-' + index).height();
+        if (imgHeight < height) {
+            height = imgHeight
+        }
+    }
+    for (let index = 1; index <= 12; index++) {
+        $('#button-tattoo-photo-' + index).height(height);
+    }
+</script>
 @endsection

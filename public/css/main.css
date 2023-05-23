@@ -253,14 +253,131 @@
 }
 
 .btn-hover-3:hover:after {
-    background: #A30EB3;
+    background: #5DB30E;
     border: 20px solid #070606;
     opacity: 0;
     left: 120%;
     -webkit-transform: rotate(40deg);
     transform: rotate(40deg);
 }
+.btn-hover-4 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
 
+.btn-hover-4 .color {
+    color: #5DB30E;
+}
+
+.btn-hover-4:hover {
+    border: 4px solid #070606;
+    background-color: #5DB30E;
+    color: #fff;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-4:hover .color {
+    color: #fff;
+}
+
+.btn-hover-4 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-4:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-4:after {
+    background: #5DB30E;
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-4:hover:after {
+    background: #5DB30E;
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+.btn-hover-5 {
+    color: #FFF;
+    border: 4px solid #070606;
+    box-shadow: 0px 0px 0px 1px #070606 inset;
+    background-color: #070606;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover-5 .color {
+    color: #0580B3;
+}
+
+.btn-hover-5:hover {
+    border: 4px solid #070606;
+    background-color: #0580B3;
+    color: #fff;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+}
+
+.btn-hover-5:hover .color {
+    color: #fff;
+}
+
+.btn-hover-5 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.btn-hover-5:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+}
+
+.btn-hover-5:after {
+    background: #0580B3;
+    border: 0px solid #070606;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+}
+
+.btn-hover-5:hover:after {
+    background: #0580B3;
+    border: 20px solid #070606;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
 /*ALL*/
 .fs-7 {
     font-size: 7em;
@@ -343,7 +460,13 @@
 }
 
 .Ola {
+    color: #050404;
+}
+.Oliwia {
     color: #A30EB3;
+}
+.Mikołaj {
+    color: #0580B3;
 }
 
 /*SCREEN*/

@@ -16,7 +16,7 @@ class Controller extends BaseController
             'name' => 'Pracownia tatuażu',
             'insta' => '@zloty.bohomaz',
             'icon' => 'house',
-            'hover' => 1,
+            'hover' => 4,
             'url' => 'https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=',
             'photo' => '',
             'p1'=>'',
@@ -38,10 +38,32 @@ class Controller extends BaseController
             'name' => 'Ola',
             'insta' => '@clim.tattoo',
             'icon' => 'heart',
-            'hover' => 3,
+            'hover' => 1,
             'url' => 'https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=',
             'photo' => 'ola.jpg',
             'p1'=>'Młoda tatuatorka, która swoje pierwsze kroczki związane z tatuażami stawiała w Tarnowskich Górach. Uwielbia cieniutkie tatuaże ale z chęcią poszerzy swoje horyzonty o większe dotworkowe prace',
+            'p2'=>''
+        ],
+        [
+            'id' => 4,
+            'name' => 'Oliwia',
+            'insta' => '@przysta_tattoo',
+            'icon' => 'heart',
+            'hover' => 3,
+            'url' => 'https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==',
+            'photo' => 'oliwia.jpg',
+            'p1'=>'Tatuatorka z Zabrza. Oliwia od kilku lat interesuje się rysunkiem oraz siatem tatuażu. Swoje pierwsze kroki stawia dopiero u nas i zaczyna jako praktykantka. Uwielbia robić konturowe projekty ale z chęcią też dołoży do swojego portfolio trochę cienia.',
+            'p2'=>''
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mikołaj',
+            'insta' => '@wheres_miki',
+            'icon' => 'star',
+            'hover' => 5,
+            'url' => 'https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==',
+            'photo' => 'miki.jpg',
+            'p1'=>'Mikołaj czyli człowiek o wielkim sercu do tatuowania. Chłopak z zajawką, który uwielbia gruby kontur i płaski cień. Człowiek, który mógłby spędzić cały dzień z maszynką, pędzlem czy ołówkiem. Witamy w zespole!',
             'p2'=>''
         ],
     ];
