@@ -37,7 +37,7 @@
                                 <div class="col-12 col-md-6 h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 mx-auto" style="width:fit-content">
                                         @foreach($artists as $artist)
-                                        <a href="{{$artist['url']}}" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 w-100 btn-hover-{{$artist['hover']}}">
+                                        <a href="{{$artist['url']}}" class="btn btn-primary mb-2 rounded-0 shadow px-3 py-1 w-100 btn-hover-{{$artist['hover']}}">
                                             <div class="d-flex align-items-center justify-content-start px-1">
                                                 <div class="m-0 p-0 pe-2"><i class="fa-brands fa-instagram m-0 p-0 fs-1"></i></div>
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
