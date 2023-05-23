@@ -299,6 +299,16 @@
     filter: brightness(0.75) saturate(1.4);
 }
 
+.div-img-3 {
+    background-image: url(photo/article.jpg);
+    background-color: #cccccc;
+    height: 20em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.75) saturate(1.4);
+}
+
 .size-200 {
     font-size: 200%;
 }
@@ -323,13 +333,16 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.4px rgba(213, 173, 109, 1);
 }
-.dropdown-menu{
+
+.dropdown-menu {
     --bs-dropdown-link-active-bg: #070606 !important;
 }
-.Daniel{
+
+.Daniel {
     color: #FFC107;
 }
-.Ola{
+
+.Ola {
     color: #A30EB3;
 }
 

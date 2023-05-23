@@ -1,5 +1,19 @@
 @extends('layout.main')
+@section('meta')
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{route('index')}}" />
 
+<title>Studio tatuażu Bytom - firma Złoty Bohomaz</title>
+<meta property="og:title" content="Studio tatuażu Bytom - firma Złoty Bohomaz" />
+<meta name="twitter:title" content="Studio tatuażu Bytom - firma Złoty Bohomaz" />
+
+<meta name="description" content="Sprawdź najlepsze miejsce na tatuaż w Bytomiu! Studio tatuażu złoty bohomaz to idealne miejsce na zrobienie tatuażu.">
+<meta property="og:description" content="Sprawdź najlepsze miejsce na tatuaż w Bytomiu! Studio tatuażu złoty bohomaz to idealne miejsce na zrobienie tatuażu." />
+<meta name="twitter:description" content="Sprawdź najlepsze miejsce na tatuaż w Bytomiu! Studio tatuażu złoty bohomaz to idealne miejsce na zrobienie tatuażu." />
+<meta name="description" content="Sprawdź najlepsze miejsce na tatuaż w Bytomiu! Studio tatuażu złoty bohomaz to idealne miejsce na zrobienie tatuażu.">
+
+<meta name="keywords" content="złoty bohomaz,złoty bohomaz bytom,studio tatuażu bytom,studio tatuaży bytom,tatuaże bytom cennik,salon tatuażu bytom,profesjonalne studio tatuażu bytom,bytom studio tatuażu,studio tatuażu bytom piłsudskiego,tatuaż bytom,tatuaż damski bytom,tatuaże bytom,tatuowanie bytom,tatuażysta bytom,tattoo bytom">
+@endsection('meta')
 @section('content')
 <main>
     <!--HERO-->
@@ -11,7 +25,7 @@
                         <div class="container h-100">
                             <div class="d-flex flex-column align-items-center justify-content-center h-100">
                                 <h1 class="logo fs-7 p-2">Złoty Bohomaz</h1>
-                                <p class="text-white p-0 py-3 m-0 font-anton">Pracownia Tatuażu</p>
+                                <h2 class="text-white p-0 py-3 m-0 font-anton" style="font-size: 1em;">Studio tatuażu</h2>
                             </div>
                         </div>
                     </div>
@@ -29,7 +43,7 @@
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
                                                     <div class="card-header font-anton">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
                                                     <div class="card-body">
-                                                        <h4 class="card-title">{{$artist['insta']}}</h4>
+                                                        <div class="card-title h4">{{$artist['insta']}}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -54,14 +68,16 @@
     <section id="album">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">NASZE PRACE</h1>
+                <h1 class="my-5 font-anton">Zdjęcia</h1>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-gem"></i></div>
             </div>
             <hr>
             <div class="row">
                 @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}"><img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow"></button>
+                    <button type="button" class="p-0 m-0 border-0 h-100" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
+                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid shadow h-100">
+                    </button>
                     <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content border-0 rounded-0">
@@ -85,7 +101,7 @@
                                             <i class="fa-brands fa-instagram m-0 p-0"></i>
                                             <div class="d-flex flex-column align-items-start justify-content-center ms-2">
                                                 <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                <h4 class="fs-6 p-0 m-0">@biszusedziara</h4>
+                                                <div class="h4 fs-6 p-0 m-0">@biszusedziara</div>
                                             </div>
                                         </div>
                                     </a>
@@ -94,7 +110,7 @@
                                             <i class="fa-brands fa-instagram m-0 p-0"></i>
                                             <div class="d-flex flex-column align-items-start justify-content-center ms-2">
                                                 <div class="font-anton" style="font-size: 0.8em;">Pracownia tatuażu <i class="fa-solid fa-house ms-2"></i></div>
-                                                <h4 class="fs-6 p-0 m-0">@zloty.bohomaz</h4>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
                                             </div>
                                         </div>
                                     </a>
@@ -115,13 +131,22 @@
         <div class="container">
             <hr style="color:#070606">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">NASZE STUDIO</h1>
+                <h1 class="my-5 font-anton">STUDIO TATUAŻU</h1>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-crown"></i></div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-12">
-                    <h1 class="my-5 text-center"><i class="fa-solid fa-spinner me-2"></i>W trakcie prac</h1>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <div class="h1 font-anton">Pracownia</div>
+                        <p class="fs-4 text-center">Nasze studio znajduje się w Bytomiu. Jest otwarte od 11.01.2022 roku i nieprzerwanie prężnie się rozwija. Kochamy robić dziarki dlatego oddaliśmy mase pracy i całe nasze serca aby studio się otwarło.</p>
+                        <p class="fs-4 text-center">Profesjonalne podejście pozwoliło nam zyskać ogromną gammę zadowolonych klientów i klientek. Do każdej osoby podchodzimy indywidualnie. Każdy tatuaż robimy najlepiej jak to możliwe, dzięki czemu uzyskujesz produkt którego oczekujesz!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <img alt="studio" src="{{asset('asset/studio.jpeg')}}" class="img-fluid" style="max-height: 75%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,7 +156,7 @@
     <section id="artist">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">ARTYŚCI</h1>
+                <div class="h1 my-5 font-anton">ARTYŚCI</div>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-people-group"></i></div>
             </div>
             <hr>
@@ -147,7 +172,7 @@
                             <div class="col-12 col-lg-8">
                                 <div class="card-header font-anton fs-1">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 {{$artist['name']}}"></i></div>
                                 <div class="card-body">
-                                    <h4 class="card-title">{{$artist['insta']}}</h4>
+                                    <div class="h4 card-title">{{$artist['insta']}}</div>
                                     <p class="card-text">{{$artist['p1']}}</p>
                                     <p class="card-text">{{$artist['p2']}}</p>
                                     <div class="d-flex flex-row align-items-start justify-content-start w-100">
@@ -157,7 +182,7 @@
                                                 <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
                                                     <div class="card-header font-anton p-0 m-0">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
                                                     <div class="card-body p-0 m-0">
-                                                        <h4 class="card-title">{{$artist['insta']}}</h4>
+                                                        <div class="h4 card-title">{{$artist['insta']}}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,13 +204,13 @@
         <div class="container">
             <hr style="color:#070606">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">WYCENA ORAZ PRJEKT</h1>
+                <h2 class="my-5 font-anton h1">CENNIK</h2>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-trophy"></i></div>
             </div>
             <hr>
             <div class="row text-center justify-content-center">
                 <div class="col-md-3 p-3  position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">01</h2>
+                    <div class="h2 number font-anton">01</div>
                     <p class="text-center fw-bold">Każdy tatuaż jest wyceniany indywidualnie cena zależy od</p>
                     <ul class="list-unstyled w-100">
                         <li class="mb-1">ilości godzin potrzebnych na wykonanie tatuażu</li>
@@ -197,31 +222,31 @@
                     </ul>
                 </div>
                 <div class="col-md-3 p-3  position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">02</h2>
+                    <div class="h2 number font-anton">02</div>
                     <p>Projekt tatuażu jest interpretacją wizualną artysty lub artysty wraz z studiem na podstawie opisu lub referencji klienta</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">03</h2>
+                    <div class="h2 number font-anton">03</div>
                     <p>Projekt tatuażu przedstawiony jest w dzień wykonania zabiegu</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">04</h2>
+                    <div class="h2 number font-anton">04</div>
                     <p>Tatuaże projektowane przez studio lub artystów objętę są prawami autorskimi. Kopiowanie jest zabronione</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">05</h2>
+                    <div class="h2 number font-anton">05</div>
                     <p>Tatuaż jest rzemiosłem artystycznym i efekt kończowy może różnić się od prezentowanrgo projektu</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">06</h2>
+                    <div class="h2 number font-anton">06</div>
                     <p>Artysta ma prawo do modyfikacji projektu w trakcie zabiegu jeżeli jego zdaniem jest to konieczne</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">07</h2>
+                    <div class="h2 number font-anton">07</div>
                     <p>Artysta może współpracować z innym artysą np. Właścicielem Studia przy tworzeniu projektu i jest on uznawany za współtwórcę przy równym podziale praw autorskich</p>
                 </div>
                 <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
-                    <h2 class="number font-anton">08</h2>
+                    <div class="h2 number font-anton">08</div>
                     <p>Jeśli wymaga tego tatuaż, wykonywany projekt jest bezpłatny. Projekt stanowi własność autora i studia. W przypadku niedotrzymania terminu sesji bądź nierealizowania wyznaczonego projektu zabrania się przekazywania go osobom trzecim czy realizacji w innym studio - wszelkie nadużycia związane z projektem są naruszeniem praw autorskich z następstwem prawnym.</p>
                 </div>
             </div>
@@ -232,7 +257,7 @@
     <section id="voucher">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">VOUCHER</h1>
+                <div class="my-5 font-anton h1">VOUCHER</div>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-tags"></i></div>
             </div>
             <hr>
@@ -255,7 +280,7 @@
         <div class="container">
             <hr style="color:#070606">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">GOJENIE</h1>
+                <div class="my-5 font-anton h1">GOJENIE</div>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-heart"></i></div>
             </div>
             <hr>
@@ -276,7 +301,7 @@
     <section id="contact">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">KONTAKT</h1>
+                <div class="my-5 font-anton h1">KONTAKT</div>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-address-book"></i></div>
             </div>
             <hr>
@@ -296,7 +321,7 @@
                                         <div class="d-flex flex-column align-items-start justify-content-center ms-2 py-2">
                                             <div class="card-header font-anton">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 color"></i></div>
                                             <div class="card-body">
-                                                <h4 class="card-title">{{$artist['insta']}}</h4>
+                                                <div class="card-title h4">{{$artist['insta']}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -305,11 +330,11 @@
                             </div>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
-                            <h2 class="font-anton">Piłsudskiego 18</h2>
+                            <p class="font-anton h2">Piłsudskiego 18</p>
                             <p>Bytom</p>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
-                            <h2 class="font-anton">zloty.bohomaz@interia.pl</h2>
+                            <div class="font-anton h2">zloty.bohomaz@interia.pl</div>
                             <a href="mailto: zloty.bohomaz@interia.pl" class="btn btn-primary rounded-0 shadow px-3 py-2 btn-hover-0"><i class="fa-solid fa-envelope me-3"></i>Napisz do nas</a>
                         </li>
                     </ul>

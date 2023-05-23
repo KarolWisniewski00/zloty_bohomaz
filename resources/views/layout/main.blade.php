@@ -4,61 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Złoty bohomaz</title>
     <link rel="icon" href="assets/main-icon.png" type="image/png">
-    <meta name="description" content="Złoty bohomaz Tattoo Studio - Najlepsze w Bytomiu i okolicy studio tatuażu, w którym artyści oddają całe serce do wykonywanej pracy">
-    <meta name="keywords" content="
-    złoty bohomaz,
-    zloty bohomaz,
-    studio tatuażu bytom,
-    tatuaże,
-    tatuaż artystyczny bytom,
-    tatuaż kolorowy bytom,
-    tatuowanie bytom,
-    tatuaż damski bytom,
-    salon tatuażu bytom,
-    tatuaż męski bytom,
-    tattoo, tattoo bytom,
-    profesjonalne studio tatuażu bytom,
-    bytom tattoo,
-    bytom tatuaż,
-    tatuaż bytom,
-    tatuaż,
-    bytom studio tatuażu,
-    bohomaz,
-    studio tatuażu,
-    biszu tatuaż,
-    bisz tattoo,
-    biszusedziara,
-    bisz tatuaż,
-    złoty bohomaz,
-    złoty bohomaz tattoo,
-    złoty bohomaz tatuaż,
-    złoty bohomaz bytom,
-    bytom złoty bohomaz,
-    biszu, tatuaże,
-    świat tatuażu,
-    tatuaż dotpoint,
-    czarny tatuaż,
-    tatuaż blackwork,
-    tattoo dotwork,
-    tattoo blackwork,
-    tatuaż dotwork śląsk,
-    tatuaż blackwork śląsk,
-    świat tatuażu,
-    tatuaż śląsk,
-    tatuaż katowice,
-    tattoo katowice,
-    tattoo śląsk,
-    tattoo chorzów,
-    tattoo gliwice,
-    tatuaż chorzów,
-    tatuaż gliwice,
-    tatto piekary śląskie,
-    tatuaż piekary śląskie
-    ">
+    <meta property="og:image" content="adres_url_obrazka" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:locale" content="pl_PL" />
     <meta name="author" content="Karol Wiśniewski">
     <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+    <meta property="place:location:latitude" content="50.3503717" />
+    <meta property="place:location:longitude" content="18.917879641792297" />
+    <meta property="place:location:street" content="Piłsudskiego 18" />
+    <meta property="place:location:city" content="Bytom" />
+    <meta property="place:location:country" content="Poland" />
+    <meta property="og:site_name" content="Studio tatuażu Bytom - firma Złoty Bohomaz"/>
+    @yield('meta')
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -70,7 +29,7 @@
     <section id="nav" class="bg-primary fixed-top">
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3">
-                <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none text-white logo size-200">
+                <a href="{{route('index')}}" class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none text-white logo size-200">
                     Złoty Bohomaz
                 </a>
 

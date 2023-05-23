@@ -1,12 +1,24 @@
 @extends('layout.main')
+@section('meta')
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{route('rule')}}" />
 
+<title>Studio tatuażu Bytom - Regulamin</title>
+<meta property="og:title" content="Studio tatuażu Bytom - Regulamin" />
+<meta name="twitter:title" content="Studio tatuażu Bytom - Regulamin" />
+
+<meta name="description" content="Zapoznaj się z regulaminem studia tatuażu Złoty Bohomaz w Bytomiu.">
+<meta property="og:description" content="Zapoznaj się z regulaminem studia tatuażu Złoty Bohomaz w Bytomiu." />
+<meta name="twitter:description" content="Zapoznaj się z regulaminem studia tatuażu Złoty Bohomaz w Bytomiu." />
+<meta name="description" content="Zapoznaj się z regulaminem studia tatuażu Złoty Bohomaz w Bytomiu.">
+@endsection('meta')
 @section('content')
 <main>
     <!--RULE-->
     <section>
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">KONTAKT</h1>
+                <h1 class="my-5 font-anton">REGULAMIN</h1>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-scale-balanced"></i></div>
             </div>
             <hr>

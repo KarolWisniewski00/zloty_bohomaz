@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\RuleController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/rule',[RuleController::class,'show'])->name('rule');
+Route::get('/rule',[RuleController::class,'index'])->name('rule');
+Route::get('/article',[ArticleController::class,'index'])->name('article');
