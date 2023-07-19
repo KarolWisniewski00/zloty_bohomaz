@@ -91,7 +91,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div>© 2022 Designed by Karol Wiśniewski</div>
+                    <div>© 2023 Designed by Karol Wiśniewski</div>
                     <div class="font-anton">All rights reserved</div>
                 </div>
             </div>

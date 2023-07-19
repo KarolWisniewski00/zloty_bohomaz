@@ -75,50 +75,54 @@
             <div class="row">
                 @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden" id="button-tattoo-photo-{{$x}}" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-{{$x}}" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
                         <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" id="img-tattoo-photo-{{$x}}" class="img-fluid shadow">
                     </button>
                     @if ($x <= 3)
                     @define $number=1
-                    @elseif($x> 3)
-                        @define $number = 2
-                        @endif
-                        <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content border-0 rounded-0">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid">
-                                        <p class="text-muted m-0 p-0 font-anton">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2"></i></p>
-                                        <p class="text-muted m-0 p-0">{{$artists[$number]['insta']}}</p>
-                                    </div>
-                                    <hr>
-                                    <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                        <a href="{{$artists[$number]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[$number]['hover']}}">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                    <div class="font-anton" style="font-size: 0.8em;">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2 color"></i></div>
-                                                    <div class="h4 fs-6 p-0 m-0">{{$artists[$number]['insta']}}</div>
-                                                </div>
+                    @elseif($x> 3 && $x < 6)
+                    @define $number=2
+                    @elseif($x> 6 && $x < 9)
+                    @define $number=3
+                    @elseif($x> 9)
+                                @define $number = 4
+                                @endif
+                                <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content border-0 rounded-0">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                        </a>
-                                        <a href="{{$artists[0]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[0]['hover']}}">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                    <div class="font-anton" style="font-size: 0.8em;">{{$artists[0]['name']}}<i class="fa-solid fa-{{$artists[0]['icon']}} ms-2"></i></div>
-                                                    <div class="h4 fs-6 p-0 m-0">{{$artists[0]['insta']}}</div>
-                                                </div>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid">
+                                                <p class="text-muted m-0 p-0 font-anton">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2"></i></p>
+                                                <p class="text-muted m-0 p-0">{{$artists[$number]['insta']}}</p>
                                             </div>
-                                        </a>
+                                            <hr>
+                                            <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                                <a href="{{$artists[$number]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[$number]['hover']}}">
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                            <div class="font-anton" style="font-size: 0.8em;">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2 color"></i></div>
+                                                            <div class="h4 fs-6 p-0 m-0">{{$artists[$number]['insta']}}</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="{{$artists[0]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[0]['hover']}}">
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                            <div class="font-anton" style="font-size: 0.8em;">{{$artists[0]['name']}}<i class="fa-solid fa-{{$artists[0]['icon']}} ms-2"></i></div>
+                                                            <div class="h4 fs-6 p-0 m-0">{{$artists[0]['insta']}}</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!--END IMAGE-->
+                                <!--END IMAGE-->
             </div>
             @endfor
         </div>
@@ -136,7 +140,7 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-12 col-xl-6">
+                <div class="col-12 col-xl-6 gsap">
                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                         <div class="h1 font-anton">Pracownia tatuażu</div>
                         <p class="fs-4 text-center">Wracamy do was z czymś nowym! A konkretnie to studiem pod nowym adresem Piłsudskiego 18.</p>
@@ -150,10 +154,9 @@
                 <div class="col-12 col-xl-6">
                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                         <div class="row">
-                            @for($i = 1 ; $i <= 4 ; $i++)
-                            <div class="col-6">
+                            @for($i = 1 ; $i <= 4 ; $i++) <div class="col-6">
                                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                                    <button type="button" class="p-0 m-0 mb-3 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden" id="button-studio-photo-{{$i}}" data-bs-toggle="modal" data-bs-target="#studio-photo-{{$i}}">
+                                    <button type="button" class="p-0 m-0 mb-3 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap" id="button-studio-photo-{{$i}}" data-bs-toggle="modal" data-bs-target="#studio-photo-{{$i}}">
                                         <img src="{{asset('image/studio'.$i.'.jpg')}}" alt="studio-photo-{{$i}}" id="img-studio-photo-{{$i}}" class="img-fluid shadow">
                                     </button>
                                     <div class="modal fade" id="studio-photo-{{$i}}" tabindex="-1" aria-labelledby="studio-photo-{{$i}}-label" aria-hidden="true">
@@ -181,12 +184,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endfor
                         </div>
+                        @endfor
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!--END ABOUT AS-->
@@ -202,7 +205,7 @@
                 <div class="col-12">
                     @foreach($artists as $artist)
                     @if($artist['id']!=1)
-                    <div class="card mb-3 border-0 rounded-0">
+                    <div class="card mb-3 border-0 rounded-0 gsap">
                         <div class="row">
                             <div class="col-12 col-lg-4">
                                 <img alt="artist-{{$artist['name']}}" src="{{asset('asset/'.$artist['photo'])}}" class="img-fluid">
@@ -247,7 +250,7 @@
             </div>
             <hr>
             <div class="row text-center justify-content-center">
-                <div class="col-md-3 p-3  position-relative" style="min-height: 7em;">
+                <div class="col-md-3 p-3  position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">01</div>
                     <p class="text-center fw-bold">Każdy tatuaż jest wyceniany indywidualnie cena zależy od</p>
                     <ul class="list-unstyled w-100">
@@ -259,31 +262,31 @@
                         <li class="mb-1">miejsca na ciele</li>
                     </ul>
                 </div>
-                <div class="col-md-3 p-3  position-relative" style="min-height: 7em;">
+                <div class="col-md-3 p-3  position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">02</div>
                     <p>Projekt tatuażu jest interpretacją wizualną artysty lub artysty wraz z studiem na podstawie opisu lub referencji klienta</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">03</div>
                     <p>Projekt tatuażu przedstawiony jest w dzień wykonania zabiegu</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">04</div>
                     <p>Tatuaże projektowane przez studio lub artystów objętę są prawami autorskimi. Kopiowanie jest zabronione</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">05</div>
-                    <p>Tatuaż jest rzemiosłem artystycznym i efekt kończowy może różnić się od prezentowanrgo projektu</p>
+                    <p>Tatuaż jest rzemiosłem artystycznym i efekt końcowy może różnić się od prezentowanego projektu</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">06</div>
                     <p>Artysta ma prawo do modyfikacji projektu w trakcie zabiegu jeżeli jego zdaniem jest to konieczne</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">07</div>
                     <p>Artysta może współpracować z innym artysą np. Właścicielem Studia przy tworzeniu projektu i jest on uznawany za współtwórcę przy równym podziale praw autorskich</p>
                 </div>
-                <div class=" col-md-3 p-3 position-relative" style="min-height: 7em;">
+                <div class=" col-md-3 p-3 position-relative gsap" style="min-height: 7em;">
                     <div class="h2 number font-anton">08</div>
                     <p>Jeśli wymaga tego tatuaż, wykonywany projekt jest bezpłatny. Projekt stanowi własność autora i studia. W przypadku niedotrzymania terminu sesji bądź nierealizowania wyznaczonego projektu zabrania się przekazywania go osobom trzecim czy realizacji w innym studio - wszelkie nadużycia związane z projektem są naruszeniem praw autorskich z następstwem prawnym.</p>
                 </div>
@@ -300,13 +303,13 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Vouchery można wykorzystać przy każdym tatuażu u artysty do którego bon został zakupiony i są ważne przez 6 miesięcy od daty zakupu</p>
                 </div>
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Klient kupujący Voucher jest informowany, że nie wykorzystana kwota Vouchera przy usługach tatuatorskich przepada i studio nie ponosi za to odpowiedzialności</p>
                 </div>
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Każdy klient, który posiada Voucher może dokonać dopłaty gotówkowej do droższej usługi tatuażu</p>
                 </div>
             </div>
@@ -323,13 +326,13 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Klient otrzymuje wskazówki dotyczące pielęgnacji tatuażu i zobowiązuje się do ich przestrzegania</p>
                 </div>
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Wszelkie skargi po stwierdzeniu braku stosowania się do zaleceń tatuatora zostaną odrzucone, a poprawka takiego tatuażu będzie odpłatna</p>
                 </div>
-                <div class="col-12 p-3 text-center">
+                <div class="col-12 p-3 text-center gsap">
                     <p class="fs-4">Studio nie ponosi odpowiedzialności za konsekwencje nieprzestrzegania zasad pielęgnacji podczas procesu gojenia</p>
                 </div>
             </div>
@@ -344,11 +347,11 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 gsap">
                     <iframe class="w-100 h-100" style="min-height:20em" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2545.8745700304244!2d18.91702386827318!3d50.35024480983486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x476b1e5d1e321be4!2sZ%C5%82oty%20Bohomaz%20Pracownia%20Tatua%C5%BCu!5e0!3m2!1spl!2spl!4v1659512722889!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 gsap">
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
                             <div class="d-flex flex-column align-items-center justify-content-center mt-3" style="width:fit-content">
@@ -368,7 +371,7 @@
                             </div>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
-                            <p class="font-anton h2">Piłsudskiego 18</p>
+                            <p class="font-anton h2 gsap">Piłsudskiego 18</p>
                             <p>Bytom</p>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
@@ -383,7 +386,10 @@
     <!--END CONTACT-->
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
+    //DESING
     $(window).on("resize", function() {
         height = 1000000
         for (let index = 1; index <= 12; index++) {
@@ -406,5 +412,46 @@
     for (let index = 1; index <= 12; index++) {
         $('#button-tattoo-photo-' + index).height(height);
     }
+    //SCROLL TRIGGER
+    gsap.registerPlugin(ScrollTrigger);
+    function st(string) {
+        const elements = document.querySelectorAll(string);
+        elements.forEach(element => {
+            gsap.fromTo(element.children, {
+                opacity: 0,
+                y: 100,
+                scale: 0.8
+            }, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 50%',
+                    end: 'top 50%',
+                }
+            });
+        });
+    };
+
+    st('#album .gsap');
+    st('#about .gsap');
+    st('#artist .gsap');
+    st('#price .gsap');
+    st('#health .gsap');
+    st('#voucher .gsap');
+    st('#contact .gsap');
+
+    $(document).ready(function() {
+        var element = $('.load-photo');
+        
+        if (element.height() === 0) {
+            location.reload();
+
+        }
+    });
+
 </script>
 @endsection

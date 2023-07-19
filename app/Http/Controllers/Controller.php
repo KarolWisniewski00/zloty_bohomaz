@@ -52,7 +52,7 @@ class Controller extends BaseController
             'hover' => 3,
             'url' => 'https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==',
             'photo' => 'oliwia.jpg',
-            'p1'=>'Tatuatorka z Zabrza. Oliwia od kilku lat interesuje się rysunkiem oraz siatem tatuażu. Swoje pierwsze kroki stawia dopiero u nas i zaczyna jako praktykantka. Uwielbia robić konturowe projekty ale z chęcią też dołoży do swojego portfolio trochę cienia.',
+            'p1'=>'Tatuatorka z Zabrza. Oliwia od kilku lat interesuje się rysunkiem oraz światem tatuażu. Swoje pierwsze kroki stawia dopiero u nas i zaczyna jako praktykantka. Uwielbia robić konturowe projekty ale z chęcią też dołoży do swojego portfolio trochę cienia.',
             'p2'=>''
         ],
         [
