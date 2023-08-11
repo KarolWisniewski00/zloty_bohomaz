@@ -1,5 +1,11 @@
 @extends('layout.main')
 @section('meta')
+<meta property="place:location:latitude" content="50.3503717" />
+<meta property="place:location:longitude" content="18.917879641792297" />
+<meta property="place:location:street" content="Piłsudskiego 18" />
+<meta property="place:location:city" content="Bytom" />
+<meta property="place:location:country" content="Poland" />
+<meta property="og:site_name" content="Studio tatuażu Bytom - firma Złoty Bohomaz" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{route('index')}}" />
 
@@ -68,64 +74,516 @@
     <section id="album">
         <div class="container">
             <div class="text-center position-relative">
-                <h1 class="my-5 font-anton">Zdjęcia</h1>
+                <h2 class="my-5 font-anton h1">Zdjęcia</h2>
                 <div class="position-absolute top-50 start-50 translate-middle opacity-15 fs-7"><i class="fa-solid fa-gem"></i></div>
             </div>
             <hr>
             <div class="row">
-                @for($x=1;$x<=12;$x++) <div class="col-6 col-md-4 col-xl-3 mb-4">
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-{{$x}}" data-bs-toggle="modal" data-bs-target="#tattoo-photo-{{$x}}">
-                        <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" id="img-tattoo-photo-{{$x}}" class="img-fluid shadow">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-1" data-bs-toggle="modal" data-bs-target="#tattoo-photo-1">
+                        <img src="{{ asset('image/tatuaz-1.jpg') }}" alt="tatuaż geometryczny na ręce" id="img-tattoo-photo-1" class="img-fluid shadow">
                     </button>
-                    @if ($x <= 3)
-                    @define $number=1
-                    @elseif($x> 3 && $x < 6)
-                    @define $number=2
-                    @elseif($x> 6 && $x < 9)
-                    @define $number=3
-                    @elseif($x> 9)
-                                @define $number = 4
-                                @endif
-                                <div class="modal fade" id="tattoo-photo-{{$x}}" tabindex="-1" aria-labelledby="tattoo-photo-{{$x}}-label" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content border-0 rounded-0">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img src="{{ asset('image/'.$x.'.jpg') }}" alt="tattoo-photo-{{$x}}" class="img-fluid">
-                                                <p class="text-muted m-0 p-0 font-anton">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2"></i></p>
-                                                <p class="text-muted m-0 p-0">{{$artists[$number]['insta']}}</p>
-                                            </div>
-                                            <hr>
-                                            <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                                <a href="{{$artists[$number]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[$number]['hover']}}">
-                                                    <div class="d-flex align-items-center justify-content-center">
-                                                        <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                            <div class="font-anton" style="font-size: 0.8em;">{{$artists[$number]['name']}}<i class="fa-solid fa-{{$artists[$number]['icon']}} ms-2 color"></i></div>
-                                                            <div class="h4 fs-6 p-0 m-0">{{$artists[$number]['insta']}}</div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="{{$artists[0]['url']}}" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-{{$artists[0]['hover']}}">
-                                                    <div class="d-flex align-items-center justify-content-center">
-                                                        <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                                        <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                            <div class="font-anton" style="font-size: 0.8em;">{{$artists[0]['name']}}<i class="fa-solid fa-{{$artists[0]['icon']}} ms-2"></i></div>
-                                                            <div class="h4 fs-6 p-0 m-0">{{$artists[0]['insta']}}</div>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                    <div class="modal fade" id="tattoo-photo-1" tabindex="-1" aria-labelledby="tattoo-photo-1-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-1.jpg') }}" alt="tatuaż geometryczny na ręce" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@biszusedziara</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-2">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@biszusedziara</div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <!--END IMAGE-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                        <img src="{{ asset('image/tatuaz-2.jpg') }}" alt="tatuaż damski na nodze" id="img-tattoo-photo-2" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-2" tabindex="-1" aria-labelledby="tattoo-photo-2-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-2.jpg') }}" alt="tatuaż damski na nodze" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@biszusedziara</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-2">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@biszusedziara</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-3" data-bs-toggle="modal" data-bs-target="#tattoo-photo-3">
+                        <img src="{{ asset('image/tatuaz-3.jpg') }}" alt="tatuaż damski na ręce" id="img-tattoo-photo-3" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-3" tabindex="-1" aria-labelledby="tattoo-photo-3-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-3.jpg') }}" alt="tatuaż damski na ręce" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Daniel<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@biszusedziara</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/biszusedziara?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-2">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Daniel<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@biszusedziara</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-4" data-bs-toggle="modal" data-bs-target="#tattoo-photo-4">
+                        <img src="{{ asset('image/tatuaz-4.jpg') }}" alt="mały tatuaż kwiatków na ręce" id="img-tattoo-photo-4" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-4" tabindex="-1" aria-labelledby="tattoo-photo-4-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-4.jpg') }}" alt="mały tatuaż kwiatków na ręce" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Ola<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@clim.tatoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-1">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Ola<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@clim.tatooa</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-5" data-bs-toggle="modal" data-bs-target="#tattoo-photo-5">
+                        <img src="{{ asset('image/tatuaz-5.jpg') }}" alt="damski tatuaż na przedramieniu" id="img-tattoo-photo-5" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-5" tabindex="-1" aria-labelledby="tattoo-photo-5-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-5.jpg') }}" alt="damski tatuaż na przedramieniu" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Ola<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@clim.tatoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-1">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Ola<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@clim.tatooa</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-6" data-bs-toggle="modal" data-bs-target="#tattoo-photo-6">
+                        <img src="{{ asset('image/tatuaz-6.jpg') }}" alt="damski tatuaż ryby" id="img-tattoo-photo-6" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-6" tabindex="-1" aria-labelledby="tattoo-photo-6-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-6.jpg') }}" alt="damski tatuaż ryby" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Ola<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@clim.tatoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-1">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Ola<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@clim.tatooa</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-7" data-bs-toggle="modal" data-bs-target="#tattoo-photo-7">
+                        <img src="{{ asset('image/tatuaz-7.jpg') }}" alt="damski delikatny tatuaż pomiędzy piersiami" id="img-tattoo-photo-7" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-7" tabindex="-1" aria-labelledby="tattoo-photo-7-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-7.jpg') }}" alt="damski delikatny tatuaż pomiędzy piersiami" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Oliwia<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@przysta_tattoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-3">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Oliwia<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@przysta_tattoo</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-8" data-bs-toggle="modal" data-bs-target="#tattoo-photo-8">
+                        <img src="{{ asset('image/tatuaz-8.jpg') }}" alt="damski tatuaż motyli na przedramieniu" id="img-tattoo-photo-8" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-8" tabindex="-1" aria-labelledby="tattoo-photo-8-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-8.jpg') }}" alt="damski tatuaż motyli na przedramieniu" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Oliwia<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@przysta_tattoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-3">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Oliwia<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@przysta_tattoo</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-9" data-bs-toggle="modal" data-bs-target="#tattoo-photo-9">
+                        <img src="{{ asset('image/tatuaz-9.jpg') }}" alt="damski delikatny tatuaż kwiatka na przedramieniu" id="img-tattoo-photo-9" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-9" tabindex="-1" aria-labelledby="tattoo-photo-9-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-9.jpg') }}" alt="damski delikatny tatuaż kwiatka na przedramieniu" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Oliwia<i class="fa-solid fa-heart ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@przysta_tattoo</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-3">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Oliwia<i class="fa-solid fa-heart ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@przysta_tattoo</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-10" data-bs-toggle="modal" data-bs-target="#tattoo-photo-10">
+                        <img src="{{ asset('image/tatuaz-10.jpg') }}" alt="tatuaż motyla na nodze" id="img-tattoo-photo-10" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-10" tabindex="-1" aria-labelledby="tattoo-photo-10-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-10.jpg') }}" alt="tatuaż motyla na nodze" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-11" data-bs-toggle="modal" data-bs-target="#tattoo-photo-11">
+                        <img src="{{ asset('image/tatuaz-11.jpg') }}" alt="duży tatuaż kwiatów" id="img-tattoo-photo-11" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-11" tabindex="-1" aria-labelledby="tattoo-photo-11-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-11.jpg') }}" alt="duży tatuaż kwiatów" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
+                <div class="col-6 col-md-4 col-xl-3 mb-4">
+                    <!--IMAGE-->
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap load-photo" id="button-tattoo-photo-12" data-bs-toggle="modal" data-bs-target="#tattoo-photo-12">
+                        <img src="{{ asset('image/tatuaz-12.jpg') }}" alt="tatuaż róży na nadgarstku" id="img-tattoo-photo-12" class="img-fluid shadow">
+                    </button>
+                    <div class="modal fade" id="tattoo-photo-12" tabindex="-1" aria-labelledby="tattoo-photo-12-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0 rounded-0">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('image/tatuaz-12.jpg') }}" alt="tatuaż róży na nadgarstku" class="img-fluid">
+                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
+                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
+                                </div>
+                                <hr>
+                                <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
+                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
+                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
+                                                <div class="font-anton" style="font-size: 0.8em;">Studio tatuażu<i class="fa-solid fa-house ms-2"></i></div>
+                                                <div class="h4 fs-6 p-0 m-0">@zloty.bohomaz</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END IMAGE-->
+                </div>
             </div>
-            @endfor
-        </div>
         </div>
     </section>
     <!--END ALBUM-->
@@ -157,7 +615,7 @@
                             @for($i = 1 ; $i <= 4 ; $i++) <div class="col-6">
                                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
                                     <button type="button" class="p-0 m-0 mb-3 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden gsap" id="button-studio-photo-{{$i}}" data-bs-toggle="modal" data-bs-target="#studio-photo-{{$i}}">
-                                        <img src="{{asset('image/studio'.$i.'.jpg')}}" alt="studio-photo-{{$i}}" id="img-studio-photo-{{$i}}" class="img-fluid shadow">
+                                        <img src="{{asset('image/zdjecie-studia-'.$i.'.jpg')}}" alt="zjęcie studia tatuażu w środku" id="img-studio-photo-{{$i}}" class="img-fluid shadow">
                                     </button>
                                     <div class="modal fade" id="studio-photo-{{$i}}" tabindex="-1" aria-labelledby="studio-photo-{{$i}}-label" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -166,7 +624,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <img src="{{asset('image/studio'.$i.'.jpg')}}" alt="studio-photo-{{$i}}" class="img-fluid">
+                                                    <img src="{{asset('image/zdjecie-studia-'.$i.'.jpg')}}" alt="zjęcie studia tatuażu w środku" class="img-fluid">
                                                 </div>
                                                 <hr>
                                                 <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
@@ -208,14 +666,14 @@
                     <div class="card mb-3 border-0 rounded-0 gsap">
                         <div class="row">
                             <div class="col-12 col-lg-4">
-                                <img alt="artist-{{$artist['name']}}" src="{{asset('asset/'.$artist['photo'])}}" class="img-fluid">
+                                <img alt="zdjęcie tatuatora lub tatuatorki" src="{{asset('asset/'.$artist['photo'])}}" class="img-fluid">
                             </div>
                             <div class="col-12 col-lg-8">
                                 <div class="card-header font-anton fs-1">{{$artist['name']}}<i class="fa-solid fa-{{$artist['icon']}} ms-2 {{$artist['name']}}"></i></div>
                                 <div class="card-body">
                                     <div class="h4 card-title">{{$artist['insta']}}</div>
-                                    <p class="card-text">{{$artist['p1']}}</p>
-                                    <p class="card-text">{{$artist['p2']}}</p>
+                                    <div class="card-text pb-3">{{$artist['p1']}}</div>
+                                    <div class="card-text pb-3">{{$artist['p2']}}</div>
                                     <div class="d-flex flex-row align-items-start justify-content-start w-100">
                                         <a href="{{$artist['url']}}" class="btn btn-primary mb-3 rounded-0 shadow px-3 py-1 btn-hover-{{$artist['hover']}} me-2" style="size: 80%;">
                                             <div class="d-flex align-items-center justify-content-start px-1">
@@ -304,13 +762,13 @@
             <hr>
             <div class="row">
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Vouchery można wykorzystać przy każdym tatuażu u artysty do którego bon został zakupiony i są ważne przez 6 miesięcy od daty zakupu</p>
+                    <div class="fs-4 pb-3">Vouchery można wykorzystać przy każdym tatuażu u artysty do którego bon został zakupiony i są ważne przez 6 miesięcy od daty zakupu</div>
                 </div>
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Klient kupujący Voucher jest informowany, że nie wykorzystana kwota Vouchera przy usługach tatuatorskich przepada i studio nie ponosi za to odpowiedzialności</p>
+                    <div class="fs-4 pb-3">Klient kupujący Voucher jest informowany, że nie wykorzystana kwota Vouchera przy usługach tatuatorskich przepada i studio nie ponosi za to odpowiedzialności</div>
                 </div>
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Każdy klient, który posiada Voucher może dokonać dopłaty gotówkowej do droższej usługi tatuażu</p>
+                    <div class="fs-4 pb-3">Każdy klient, który posiada Voucher może dokonać dopłaty gotówkowej do droższej usługi tatuażu</div>
                 </div>
             </div>
         </div>
@@ -327,13 +785,13 @@
             <hr>
             <div class="row">
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Klient otrzymuje wskazówki dotyczące pielęgnacji tatuażu i zobowiązuje się do ich przestrzegania</p>
+                    <div class="fs-4 pb-3">Klient otrzymuje wskazówki dotyczące pielęgnacji tatuażu i zobowiązuje się do ich przestrzegania</div>
                 </div>
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Wszelkie skargi po stwierdzeniu braku stosowania się do zaleceń tatuatora zostaną odrzucone, a poprawka takiego tatuażu będzie odpłatna</p>
+                    <div class="fs-4 pb-3">Wszelkie skargi po stwierdzeniu braku stosowania się do zaleceń tatuatora zostaną odrzucone, a poprawka takiego tatuażu będzie odpłatna</div>
                 </div>
                 <div class="col-12 p-3 text-center gsap">
-                    <p class="fs-4">Studio nie ponosi odpowiedzialności za konsekwencje nieprzestrzegania zasad pielęgnacji podczas procesu gojenia</p>
+                    <div class="fs-4 pb-3">Studio nie ponosi odpowiedzialności za konsekwencje nieprzestrzegania zasad pielęgnacji podczas procesu gojenia</div>
                 </div>
             </div>
     </section>
@@ -371,8 +829,7 @@
                             </div>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
-                            <p class="font-anton h2 gsap">Piłsudskiego 18</p>
-                            <p>Bytom</p>
+                            <address class="font-anton h2 gsap">Piłsudskiego 18 <br> Bytom</address>
                         </li>
                         <li class="mb-3 d-flex flex-column align-items-center justify-content-center">
                             <div class="font-anton h2">zloty.bohomaz@interia.pl</div>
@@ -414,6 +871,7 @@
     }
     //SCROLL TRIGGER
     gsap.registerPlugin(ScrollTrigger);
+
     function st(string) {
         const elements = document.querySelectorAll(string);
         elements.forEach(element => {
@@ -446,12 +904,11 @@
 
     $(document).ready(function() {
         var element = $('.load-photo');
-        
+
         if (element.height() === 0) {
             location.reload();
 
         }
     });
-
 </script>
 @endsection

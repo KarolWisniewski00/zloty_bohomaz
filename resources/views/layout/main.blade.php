@@ -11,14 +11,7 @@
     <meta property="og:locale" content="pl_PL" />
     <meta name="author" content="Karol Wiśniewski">
     <meta http-equiv="X-Ua-Compatible" content="IE=edge">
-    <meta property="place:location:latitude" content="50.3503717" />
-    <meta property="place:location:longitude" content="18.917879641792297" />
-    <meta property="place:location:street" content="Piłsudskiego 18" />
-    <meta property="place:location:city" content="Bytom" />
-    <meta property="place:location:country" content="Poland" />
-    <meta property="og:site_name" content="Studio tatuażu Bytom - firma Złoty Bohomaz"/>
     @yield('meta')
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <script src="https://kit.fontawesome.com/e37acf9c2e.js" crossorigin="anonymous"></script>
