@@ -859,16 +859,6 @@
             $('#button-tattoo-photo-' + index).height(height);
         }
     });
-    height = 1000000
-    for (let index = 1; index <= 12; index++) {
-        var imgHeight = $('#img-tattoo-photo-' + index).height();
-        if (imgHeight < height) {
-            height = imgHeight
-        }
-    }
-    for (let index = 1; index <= 12; index++) {
-        $('#button-tattoo-photo-' + index).height(height);
-    }
     //SCROLL TRIGGER
     gsap.registerPlugin(ScrollTrigger);
 
@@ -903,11 +893,15 @@
     st('#contact .gsap');
 
     $(document).ready(function() {
-        var element = $('.load-photo');
-
-        if (element.height() === 0) {
-            location.reload();
-
+        height = 1000000
+        for (let index = 1; index <= 12; index++) {
+            var imgHeight = $('#img-tattoo-photo-' + index).height();
+            if (imgHeight < height) {
+                height = imgHeight
+            }
+        }
+        for (let index = 1; index <= 12; index++) {
+            $('#button-tattoo-photo-' + index).height(height);
         }
     });
 </script>
