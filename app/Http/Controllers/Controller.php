@@ -54,17 +54,6 @@ class Controller extends BaseController
             'photo' => 'oliwia.jpg',
             'p1'=>'Tatuatorka z Zabrza. Oliwia od kilku lat interesuje się rysunkiem oraz światem tatuażu. Swoje pierwsze kroki stawia dopiero u nas i zaczyna jako praktykantka. Uwielbia robić konturowe projekty ale z chęcią też dołoży do swojego portfolio trochę cienia.',
             'p2'=>''
-        ],
-        [
-            'id' => 4,
-            'name' => 'Mikołaj',
-            'insta' => '@wheres_miki',
-            'icon' => 'star',
-            'hover' => 5,
-            'url' => 'https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==',
-            'photo' => 'miki.jpg',
-            'p1'=>'Mikołaj czyli człowiek o wielkim sercu do tatuowania. Chłopak z zajawką, który uwielbia gruby kontur i płaski cień. Człowiek, który mógłby spędzić cały dzień z maszynką, pędzlem czy ołówkiem. Witamy w zespole!',
-            'p2'=>''
-        ],
+        ]
     ];
 }
