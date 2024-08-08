@@ -857,7 +857,6 @@
     st('#price .gsap');
     st('#health .gsap');
     st('#voucher .gsap');
-    st('#contact .gsap');
     $(document).ready(function() {
         height = 1000000
         for (let index = 1; index <= 12; index++) {
