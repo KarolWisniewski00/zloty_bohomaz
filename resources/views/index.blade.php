@@ -470,20 +470,9 @@
                                 </div>
                                 <div class="modal-body">
                                     <img src="{{ asset('image/tatuaz-10.jpg') }}" alt="tatuaż motyla na nodze" class="img-fluid">
-                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
-                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
                                 </div>
                                 <hr>
                                 <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
-                                            </div>
-                                        </div>
-                                    </a>
                                     <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <i class="fa-brands fa-instagram m-0 p-0"></i>
@@ -512,20 +501,9 @@
                                 </div>
                                 <div class="modal-body">
                                     <img src="{{ asset('image/tatuaz-11.jpg') }}" alt="duży tatuaż kwiatów" class="img-fluid">
-                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
-                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
                                 </div>
                                 <hr>
                                 <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
-                                            </div>
-                                        </div>
-                                    </a>
                                     <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <i class="fa-brands fa-instagram m-0 p-0"></i>
@@ -554,20 +532,9 @@
                                 </div>
                                 <div class="modal-body">
                                     <img src="{{ asset('image/tatuaz-12.jpg') }}" alt="tatuaż róży na nadgarstku" class="img-fluid">
-                                    <p class="text-muted m-0 p-0 font-anton">Mikołaj<i class="fa-solid fa-star ms-2"></i></p>
-                                    <p class="text-muted m-0 p-0">@wheres_miki</p>
                                 </div>
                                 <hr>
                                 <div class="modal-footer d-flex flex-column align-items-start justify-content-center border-0" style="width:fit-content;">
-                                    <a href="https://instagram.com/wheres_miki?igshid=NTc4MTIwNjQ2YQ==" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-5">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <i class="fa-brands fa-instagram m-0 p-0"></i>
-                                            <div class="d-flex flex-column align-items-start justify-content-center ms-2">
-                                                <div class="font-anton" style="font-size: 0.8em;">Mikołaj<i class="fa-solid fa-star ms-2 color"></i></div>
-                                                <div class="h4 fs-6 p-0 m-0">@wheres_miki</div>
-                                            </div>
-                                        </div>
-                                    </a>
                                     <a href="https://instagram.com/zloty.bohomaz?igshid=YmMyMTA2M2Y=" class="btn btn-primary mb-3 rounded-0 shadow w-100 btn-hover-4">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <i class="fa-brands fa-instagram m-0 p-0"></i>
