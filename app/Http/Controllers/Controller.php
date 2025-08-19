@@ -32,28 +32,7 @@ class Controller extends BaseController
             'photo' => 'bisz.jpg',
             'p1'=>'Zaczął tatuować od razu po ukończeniu 19 roku życia. A że teraz będzie mieć 22 lata to mijają już za niedługo 3 lata od momentu zaczęcia swojej działalności. Jednak na otwarcie studia zdecydował się dopiero w tym roku w styczniu i jest jednym z młodszych założycieli studia tatuażu w Polsce. Ale jak widać był to dobry krok ze względu na ilość osób chętnych do niego na tatuaż.',
             'p2'=>'Sam też mówi, że to wy klienci zbudowaliści to studio, poprzez zaufanie wasze do jego pracy. Cieszy się, że może dzielić sie swoją pasją z wami i tworzyć miejsce, w którym każdy będzie się czuł jak u siebie.'
-        ],
-        [
-            'id' => 3,
-            'name' => 'Ola',
-            'insta' => '@clim.tattoo',
-            'icon' => 'heart',
-            'hover' => 1,
-            'url' => 'https://instagram.com/clim.tattoo?igshid=YmMyMTA2M2Y=',
-            'photo' => 'ola.jpg',
-            'p1'=>'Młoda tatuatorka, która swoje pierwsze kroczki związane z tatuażami stawiała w Tarnowskich Górach. Uwielbia cieniutkie tatuaże ale z chęcią poszerzy swoje horyzonty o większe dotworkowe prace',
-            'p2'=>''
-        ],
-        [
-            'id' => 4,
-            'name' => 'Oliwia',
-            'insta' => '@przysta_tattoo',
-            'icon' => 'heart',
-            'hover' => 3,
-            'url' => 'https://instagram.com/przysta_tattoo?igshid=NTc4MTIwNjQ2YQ==',
-            'photo' => 'oliwia.jpg',
-            'p1'=>'Tatuatorka z Zabrza. Oliwia od kilku lat interesuje się rysunkiem oraz światem tatuażu. Swoje pierwsze kroki stawia dopiero u nas i zaczyna jako praktykantka. Uwielbia robić konturowe projekty ale z chęcią też dołoży do swojego portfolio trochę cienia.',
-            'p2'=>''
         ]
+        
     ];
 }
