@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-1" data-bs-toggle="modal" data-bs-target="#tattoo-photo-1">
                         <img src="{{ asset('image/tatuaz-1.jpg') }}"  id="img-tattoo-photo-1" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-1" tabindex="-1" aria-labelledby="tattoo-photo-1-label" aria-hidden="true">
@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-3" data-bs-toggle="modal" data-bs-target="#tattoo-photo-3">
                         <img src="{{ asset('image/tatuaz-3.jpg') }}"  id="img-tattoo-photo-3" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-3" tabindex="-1" aria-labelledby="tattoo-photo-3-label" aria-hidden="true">
@@ -207,7 +207,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-4" data-bs-toggle="modal" data-bs-target="#tattoo-photo-4">
                         <img src="{{ asset('image/tatuaz-4.jpg') }}"  id="img-tattoo-photo-4" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-4" tabindex="-1" aria-labelledby="tattoo-photo-4-label" aria-hidden="true">
@@ -249,7 +249,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-5" data-bs-toggle="modal" data-bs-target="#tattoo-photo-5">
                         <img src="{{ asset('image/tatuaz-5.jpg') }}"  id="img-tattoo-photo-5" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-5" tabindex="-1" aria-labelledby="tattoo-photo-5-label" aria-hidden="true">
@@ -291,7 +291,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-6" data-bs-toggle="modal" data-bs-target="#tattoo-photo-6">
                         <img src="{{ asset('image/tatuaz-6.jpg') }}"  id="img-tattoo-photo-6" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-6" tabindex="-1" aria-labelledby="tattoo-photo-6-label" aria-hidden="true">
@@ -333,7 +333,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-7" data-bs-toggle="modal" data-bs-target="#tattoo-photo-7">
                         <img src="{{ asset('image/tatuaz-7.jpg') }}"  id="img-tattoo-photo-7" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-7" tabindex="-1" aria-labelledby="tattoo-photo-7-label" aria-hidden="true">
@@ -375,7 +375,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-8" data-bs-toggle="modal" data-bs-target="#tattoo-photo-8">
                         <img src="{{ asset('image/tatuaz-8.jpg') }}"  id="img-tattoo-photo-8" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-8" tabindex="-1" aria-labelledby="tattoo-photo-8-label" aria-hidden="true">
@@ -417,7 +417,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-9" data-bs-toggle="modal" data-bs-target="#tattoo-photo-9">
                         <img src="{{ asset('image/tatuaz-9.jpg') }}"  id="img-tattoo-photo-9" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-9" tabindex="-1" aria-labelledby="tattoo-photo-9-label" aria-hidden="true">
@@ -459,7 +459,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-10" data-bs-toggle="modal" data-bs-target="#tattoo-photo-10">
                         <img src="{{ asset('image/tatuaz-10.jpg') }}"  id="img-tattoo-photo-10" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-10" tabindex="-1" aria-labelledby="tattoo-photo-10-label" aria-hidden="true">
@@ -501,7 +501,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-11" data-bs-toggle="modal" data-bs-target="#tattoo-photo-11">
                         <img src="{{ asset('image/tatuaz-11.jpg') }}"  id="img-tattoo-photo-11" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-11" tabindex="-1" aria-labelledby="tattoo-photo-11-label" aria-hidden="true">
@@ -543,7 +543,7 @@
                 </div>
                 <div class="col-6 col-md-4 col-xl-3 mb-4">
                     <!--IMAGE-->
-                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-2" data-bs-toggle="modal" data-bs-target="#tattoo-photo-2">
+                    <button type="button" class="p-0 m-0 border-0 d-flex align-items-center justify-content-center bg-transparent overflow-hidden  load-photo" id="button-tattoo-photo-12" data-bs-toggle="modal" data-bs-target="#tattoo-photo-12">
                         <img src="{{ asset('image/tatuaz-12.jpg') }}"  id="img-tattoo-photo-12" class="img-fluid shadow">
                     </button>
                     <div class="modal fade" id="tattoo-photo-12" tabindex="-1" aria-labelledby="tattoo-photo-12-label" aria-hidden="true">
